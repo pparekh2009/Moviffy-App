@@ -9,15 +9,18 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class DashboardActivity extends AppCompatActivity {
+public class DashboardActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
-    ViewPager2 mainViewPager = findViewById(R.id.mainViewPager);
-    BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
+    ViewPager2 mainViewPager;
+    BottomNavigationView bottomNavigation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
+        mainViewPager = findViewById(R.id.mainViewPager);
+        bottomNavigation = findViewById(R.id.bottomNavigation);
 
         MainViewPagerAdapter mainViewPagerAdapter = new MainViewPagerAdapter(this);
         mainViewPager.setAdapter(mainViewPagerAdapter);
@@ -50,23 +53,23 @@ public class DashboardActivity extends AppCompatActivity {
                 super.onPageScrollStateChanged(state);
             }
         });
-      bottomNavigation.setOnNavigationItemSelectedListener((BottomNavigationView.OnNavigationItemSelectedListener) this);
+      bottomNavigation.setOnNavigationItemSelectedListener(this);
     }
 
-//    @Override
-//    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//
-//        switch (item.getItemId()) {
-//            case R.id.app_bar_Home:
-//                mainViewPager.setCurrentItem(0);
-//                break;
-//            case R.id.app_bar_search:
-//                mainViewPager.setCurrentItem(1);
-//                break;
-//            case R.id.app_bar_Account:
-//                mainViewPager.setCurrentItem(2);
-//                break;
-//        }
-//        return true;
-//    }
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.app_bar_Home:
+                mainViewPager.setCurrentItem(0);
+                break;
+            case R.id.app_bar_search:
+                mainViewPager.setCurrentItem(1);
+                break;
+            case R.id.app_bar_Account:
+                mainViewPager.setCurrentItem(2);
+                break;
+        }
+        return true;
+    }
 }

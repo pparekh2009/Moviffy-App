@@ -9,12 +9,14 @@ import android.widget.Button;
 
 public class LanguageActivity extends AppCompatActivity {
 
+    Button submitBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_language);
 
-        Button submitBtn = findViewById(R.id.submit_btn);
+        submitBtn = findViewById(R.id.submit_btn);
 
          submitBtn.setOnClickListener(new View.OnClickListener() {
              @Override

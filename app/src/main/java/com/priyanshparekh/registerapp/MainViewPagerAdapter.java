@@ -20,14 +20,19 @@ public class MainViewPagerAdapter extends FragmentStateAdapter {
         Fragment fragment;
 
         switch (position) {
-            case 1:
+            case 0:
                 fragment = new HomeFragment();
                 break;
-            case 2:
+            case 1:
                 fragment = new searchFragment();
                 break;
-            default:
+            case 2:
                 fragment = new AccountFragment();
+                break;
+//            default:
+//                fragment = new HomeFragment();
+            default:
+                throw new IllegalStateException("Unexpected value: " + position);
         }
         return fragment;
     }
