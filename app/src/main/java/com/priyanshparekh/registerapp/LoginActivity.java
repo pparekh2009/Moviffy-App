@@ -7,10 +7,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class LoginActivity extends AppCompatActivity {
 
     Button loginBtn;
+    EditText emailInput, passwordInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +20,11 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         loginBtn = findViewById(R.id.login_btn);
+        emailInput = findViewById(R.id.email_input);
+        passwordInput = findViewById(R.id.password_input);
+
+        String email = emailInput.getText().toString();
+        String password = passwordInput.getText().toString();
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
