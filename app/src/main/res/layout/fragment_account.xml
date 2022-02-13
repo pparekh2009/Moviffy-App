@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1E1E1E"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".AccountFragment">
 
@@ -10,10 +11,60 @@
         android:id="@+id/account_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Account"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="User"
+        android:textSize="48sp"
+        android:layout_marginHorizontal="20dp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/profile_pic"
+        app:layout_constraintTop_toTopOf="@id/profile_pic"
+        app:layout_constraintBottom_toBottomOf="@id/profile_pic"/>
+
+    <ImageButton
+        android:id="@+id/settings_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#1E1E1E"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_baseline_settings_24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/profile_pic"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_person_24"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/watchlist_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WatchList"
+        android:textSize="32sp"
+        android:layout_margin="80dp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/account_tv"/>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginVertical="50dp"
+        android:src="@drawable/kashmir_flies"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/watchlist_tv" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginVertical="20dp"
+        android:src="@drawable/mithu"
+        app:layout_constraintTop_toBottomOf="@+id/imageView1"
+        app:layout_constraintStart_toStartOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

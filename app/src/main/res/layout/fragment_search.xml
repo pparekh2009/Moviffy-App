@@ -28,7 +28,7 @@
         android:textSize="40sp"
         android:paddingHorizontal="20dp"
         android:layout_marginTop="20dp"
-        android:textColor="@color/white"
+        android:textColor="#FFE600"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/search_bar" />
@@ -49,14 +49,14 @@
         android:textSize="40sp"
         android:paddingHorizontal="20dp"
         android:layout_marginTop="20dp"
-        android:textColor="@color/white"
+        android:textColor="#FFE600"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/genre_recycler_view" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/lang_recycler_view"
-        android:layout_width="match_parent"
+          android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/lang_tv"
         app:layout_constraintStart_toStartOf="parent"
