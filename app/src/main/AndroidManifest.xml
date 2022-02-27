@@ -12,14 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-        <activity android:name=".SplashScreenActivity">
+        <activity android:name=".UI.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DashboardActivity" >
+        <activity android:name=".UI.DashboardActivity" >
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 
@@ -27,13 +27,13 @@
 <!--            </intent-filter>-->
 
         </activity>
-        <activity android:name=".LanguageActivity" />
-        <activity android:name=".OtpActivity" /> <!-- android:theme="@style/Theme.RegisterApp"> -->
-        <activity android:name=".HomeActivity">
+        <activity android:name=".UI.LanguageActivity" />
+        <activity android:name=".UI.OtpActivity" /> <!-- android:theme="@style/Theme.RegisterApp"> -->
+        <activity android:name=".UI.HomeActivity">
 
         </activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".UI.LoginActivity" />
+        <activity android:name=".UI.MainActivity" />
     </application>
 
 </manifest>
